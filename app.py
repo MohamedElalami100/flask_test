@@ -85,5 +85,10 @@ def upload_image(firmId):
                     "nir_image_url": nir_image_url}), 200
 
 
+@app.route('/uploadManifest/<firmId>', methods=['POST'])
+def upload_Manifest(firmId):
+    return jsonify({"message": "Manifest uploaded successfully"}), 200
+
+
 if __name__ == '__main__':
     app.run()
